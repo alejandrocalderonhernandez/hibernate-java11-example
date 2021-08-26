@@ -1,13 +1,16 @@
 package com.alejandro;
 
 import com.alejandro.model.entity.EmployeeEntity;
+import com.alejandro.util.HibernateHelperFromProperties;
 import com.alejandro.util.HibernateUtil;
 import org.hibernate.Session;
 
 public class Main {
 
     public static void main(String... args) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+        //Session session = HibernateUtil.getSessionFactory().openSession();
+
+        Session session = HibernateHelperFromProperties.getSessionFactory().openSession();
         session.beginTransaction();
 
         EmployeeEntity emp = new EmployeeEntity();
