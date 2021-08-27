@@ -12,11 +12,12 @@ import java.util.Properties;
 public class HibernateHelperFromProperties {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
+    private static final String CONFIG_FILE_PATH = "src/main/resources/hibernate.properties";
 
     private static SessionFactory buildSessionFactory() {
         Properties properties= new Properties();
         try {
-            properties.load(new FileInputStream(new File("src/main/resources/hibernate.properties")));
+            properties.load(new FileInputStream(CONFIG_FILE_PATH));
         } catch (IOException e) {
             e.printStackTrace();
         }

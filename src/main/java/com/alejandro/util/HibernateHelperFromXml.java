@@ -4,7 +4,7 @@ import java.io.File;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class HibernateUtil {
+public class HibernateHelperFromXml {
 
     private static final SessionFactory sessionFactory = buildSessionFactory();
     private static final String CONFIG_FILE_PATH = "src/main/resources/hibernate.cfg.xml";

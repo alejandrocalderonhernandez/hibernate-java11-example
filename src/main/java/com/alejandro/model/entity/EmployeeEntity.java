@@ -20,8 +20,7 @@ public class EmployeeEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true, nullable = false)
-    private Integer employeeId;
+    private Long id;
 
     @Column(name = "EMAIL", unique = true, nullable = false, length = 100)
     private String email;
@@ -32,8 +31,8 @@ public class EmployeeEntity implements Serializable {
     @Column(name = "LAST_NAME", unique = false, nullable = false, length = 100)
     private String lastName;
 
-    public Integer getEmployeeId() {
-        return employeeId;
+    public Long getEmployeeId() {
+        return id;
     }
 
     public String getFirstName() {
@@ -44,8 +43,8 @@ public class EmployeeEntity implements Serializable {
         return lastName;
     }
 
-    public void setEmployeeId(Integer employeeId) {
-        this.employeeId = employeeId;
+    public void setEmployeeId(Long employeeId) {
+        this.id = employeeId;
     }
 
     public void setEmail(String email) {
@@ -63,7 +62,7 @@ public class EmployeeEntity implements Serializable {
     @Override
     public String toString() {
         return "EmployeeEntity{" +
-                "employeeId=" + employeeId +
+                "employeeId=" + id +
                 ", email='" + email + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
